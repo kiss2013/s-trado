@@ -34,6 +34,28 @@
             top: 20px;
             left: 20%;
         }
+        #gs{
+         background-image: url('img_temp/gs3.png');
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+                background-position: center;
+        }
+        #strado{
+         background-image: url('img/logo_strado.svg');
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #gs, #strado{
+            width:100px;
+            height:100px;
+        }
+        #gs:hover, #strado:hover{
+            width:150px;
+            height:150px;
+        }
         
         audio {
             width: 100%;
@@ -57,6 +79,12 @@
         }
 
     </style>
+    <script type="text/javascript">
+    var displayCustomHTMLToast = function () {
+      var $toastContent = $('<span  style="background-image:url(img/logo_strado.svg);">I am toast content</span>');
+      Materialize.toast($toastContent, 10000);
+    }
+  </script>
     <!-- my temp hacks END-->
 </head>
 
@@ -92,7 +120,7 @@
         </a>
         <ul>
             <li><a class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Программа курса" href="#modal00"><i class="material-icons">insert_chart</i></a></li>
-            <li><a class="btn-floating yellow darken-1 tooltipped" data-position="left" data-delay="50" data-tooltip="I am a tooltip"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating yellow darken-1 tooltipped" onclick="displayCustomHTMLToast()" data-position="left" data-delay="50" data-tooltip="<span class='red'>I am a tooltip</span>"><i class="material-icons">format_quote</i></a></li>
             <li><a class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="I am a tooltip"><i class="material-icons">publish</i></a></li>
             <li><a class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="I am a tooltip"><i class="material-icons">attach_file</i></a></li>
         </ul>
@@ -105,12 +133,15 @@
                 <br><br>
                 <!-- 
                 <h3 class="header right deepskyblue-text text-lighten-2">Сметчик с "Гранд-смета"</h3>  -->
-                <div class="row right">
-                    <h5 class="header col s12 light">Можно ли объять необъятное за 40 часов? </h5>
+                <div class="row ">
+                    <h5 class="header col s12 m6 offset-m6 light">Можно ли объять необъятное за 40 часов? </h5>
                                     </div>
                 <div class="row center">
-                    <a href="#modal1" id="download-button" class="btn-large waves-effect waves-light grey ">Гранд-Смета 40</a>
-                    <a href="#modal1" id="download-button" class="btn-large waves-effect waves-light grey ">+ Консалтинг 365</a>
+                    <div class="col s12 m6 offset-m6 light">
+                    <a href="#modal1" id="gs" class="btn-floating btn-large waves-effect waves-light transparent tooltipped" data-position="left" data-tooltip="Практикум в компьютерном классе"></a>
+                        <span  id="download-button" class="btn-floating btn-large waves-effect waves-light grey ">+</span>
+                        <a href="#modal1" id="strado" class="btn-floating btn-large waves-effect waves-light grey transparent tooltipped" data-position="left" data-tooltip="Бесплатные консультации в течение года"></a>
+                        </div>
                 </div>
                 <br><br>
 
