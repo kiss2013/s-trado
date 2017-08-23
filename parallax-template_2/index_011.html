@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parallax Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- my temp hacks-->
+    <style>
+        .parallax-container {
+            height: 640px;
+        }
+        #logo-container {
+            width: 50px;
+            height: inherit;
+            background-image: url('img/logo_strado.svg');
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 20px;
+            left: 10%;
+        }
+        #logo-containerGrand {
+            width: 60px;
+            height: inherit;
+            background-image: url('img_temp/gs11.png');
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 20px;
+            left: 20%;
+        }
+        #gs:hover{
+         background-image: url('img_temp/grand1.png');
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+                background-position: center;
+        }
+        #strado:hover{
+         background-image: url('img/logo_strado.svg');
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #gs, #strado{
+            width:50px;
+            height:50px;
+        }
+        #gs:hover, #strado:hover{
+            width:100px;
+            height:100px;
+        }
+        #gs:hover span, #strado:hover span{
+         visibility: hidden;   
+        }
+        
+        audio {
+            width: 100%;
+            background-color: deepskyblue;
+        }
+        /* float fixed tooltips background deepskyblue*/
+        
+        .backdrop {
+            background-color: grey;
+        }
+        /* cards 1 common background     
+        
+        .withBackground {
+            background-image: url("img_freemind/sm_grand0.jpg");
+            background-repeat: no-repeat;
+            background-origin: border-box;
+        }
+        */
+        
+        .myfootercolor {
+            background-color: #88a0bd;
+        }
+
+    </style>
+    <script type="text/javascript">
+    var displayCustomHTMLToast = function () {
+      var $toastContent = $('<span  style="background-image:url(img/logo_strado.svg);">I am toast content</span>');
+      Materialize.toast($toastContent, 10000);
+    }
+  </script>
+    <!-- my temp hacks END-->
+</head>
+
+<body>
+    <!-- nav menu -->
+    
+     <!-- nav menu END -->
+    <!-- float fixed butoons menu -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red tooltipped" data-position="left" data-delay="50" data-tooltip="Наведите курсор на нужную кнопку" >
+            <i class="large material-icons">menu</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Программа курса" href="#modal00"><i class="material-icons">attach_file</i></a></li>
+            <li><a class="btn-floating green darken-1 tooltipped" onclick="displayCustomHTMLToast()" data-position="left" data-delay="50" data-tooltip="Что такое Обучение + Консалтинг365"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating yellow tooltipped" data-position="left" data-delay="50" data-tooltip="О наших суперспециалистах"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating orange tooltipped" data-position="left" data-delay="50" data-tooltip="+7 (495) 698-97-43 mail@s-trado.ru
+" href="#modal1"><i class="material-icons">send</i></a></li>
+        </ul>
+    </div>
+    <!-- float fixed butoons menu END -->
+    <!-- parallax 1 -->
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+             
+            <div class="container">
+                <br><br>
+                <!-- 
+                <h3 class="header right deepskyblue-text text-lighten-2">Сметчик с "Гранд-смета"</h3>  -->
+                <!-- <div class="row ">
+                    <h5 class="header col s12 m6 offset-m6 light">Можно ли объять необъятное за 40 часов? </h5>
+                                    </div>-->
+                <div class="row center">
+                    <!-- <div class="col s12 m6 offset-m6 light">
+                        <a href="#modal1" id="gs" class="btn-floating btn-large waves-effect waves-light transparent tooltipped" data-position="top" data-tooltip="Пять дней в компьютерном классе"><span>5x8</span></a>
+                        <span  id="tech" class="btn-floating btn-large waves-effect waves-light transparent tooltipped" data-position="top" data-tooltip="Обучение на 'живых' примерах"><span>+</span></span>
+                        <a href="#modal1" id="strado" class="btn-floating btn-large waves-effect waves-light grey transparent tooltipped" data-position="top" data-tooltip="Бесплатные консультации по технологиям строительства"><span>365</span></a>
+                        </div> --> 
+                </div>
+                <br><br>
+
+            </div>
+             
+        </div>
+        <div class="parallax"><img src="img_elef\sm_delo_1_1.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+    <!-- parallax 1 END-->
+    <!-- first block of text-->
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section 2  -->
+            <div class="row">
+
+                <!-- summary1-->
+                <div class="col s12">
+                    <div class="icon-block">
+
+                        <h4 class="center">Обучение + Консалтинг365</h4>
+
+                        <p class="light">40 часов в компьютерном классе + 365 дней бесплатных консультаций. Почему 40 часов? Потому, что нам удалось "отсечь все лишнее". Почему 365 дней? Потому, что технологи строительства быстро осовоить нельзя. Так что к вашим услугам наши суперсметчики-консультанты.</p>
+
+                    </div>
+                </div>
+
+
+
+                <!-- summary1 END-->
+                <!-- summary2 in one row-->
+
+
+                <!--   Icon Section 2  -->
+
+                <div class="col s12">
+                    <div class="icon-block">
+
+                        <h4 class="center">Ваши возможности после обучения</h4>
+
+                        <p class="light">Ниже мы собрали (лишь некоторые) фрагменты из маркетинговых исследований и мнений экспертов. Несмотря на кризис "спрос" на сметчиков растет. Но рынок быстро заполняется соикателями-дилетентами. Как с ними конкурировать? Как стать профессионалом? Мы постоянно получаем информацию "из первых рук". Хотите подробностей? Звоните!
+                    </div>
+                </div>
+            </div>
+            <!-- summary2 in one row END-->
+        </div>
+    </div>
+    <!-- first block of text END-->
+
+
+    <!-- cards 1 -->
+    <div class="container withBackground">
+        <div class="section_fake">
+            <!-- I added "_fake" to remove vertical margin -->
+            <div class="row">
+
+                <!-- 11 -->
+                <div class="col s12 m6  xl4">
+                    <div class="card">
+
+                        <div class="card-content">
+                            <a class="truncate card-title  grey-text text-darken-4" href="#modal11"><i class="material-icons left">layers</i>О вакансиях</a>
+                            <p class="truncate">и фрилансе сметчиков на рынке труда</p>
+                            <p class="truncate">Специфика профессии</p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="truncate card-title grey-text text-darken-4">Сметчик<i class="material-icons left">close</i></span>
+                            <p>Даже в кризис эта специальность востребована</p>
+                            <p>Продажи "Гранд-сметы" растут, мы выолняем все больше заказов на корпоративное обучение, многие наши выпускники приходят к нам со своими фриланс-проектами... Статитика Яндекса показывает рост количества запросов по "сметной" тематике... </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 12 -->
+                <div class="col s12 m6  xl4">
+                    <div class="card">
+
+                        <div class="card-content ">
+                            <a class="truncate card-title grey-text text-darken-4" href="#modal12"><i class="material-icons left" >layers</i>Работодатели</a>
+                            <p class="truncate">Кого берут на работу </p>
+                            <p class="truncate">О дефиците квалифицированных сметчикив и избытке соискателей</p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Работодатели<i class="material-icons right">close</i></span>
+                            <p>Работодателям нужен не просто "свой человек", но еще и опытный. </p>
+                            <p>На курсах сметчиков можно "загрузить" в кратковременную память будущего сметчика почти все, что нужно... Но</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 13 -->
+                <div class="col s12 m6  xl4">
+                    <div class="card">
+                        <div class="card-content">
+                            <a class="truncate card-title  grey-text text-darken-4" href="#modal13"><i class="material-icons right">layers</i>Квалификация</a>
+                            <p class="truncate">Что должен уметь хороший сметчик?</p>
+                            <p class="truncate">Тотальное незнание технологий строительства</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 14 -->
+                <div class="col s12 m6  xl4">
+                    <div class="card">
+
+                        <div class="card-content">
+                            <a class="card-title  grey-text text-darken-4" href="#modal1"><i class="material-icons right">layers</i>Modal</a>
+
+                            <p class="truncate">О вакасиях и фрилансе на рынке труда</p>
+                            <p class="truncate"><a href="#">Перспективы профессии.</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Сметчик<i class="material-icons right">close</i></span>
+                            <p>Даже в кризис эта специальность востребована</p>
+                            <p>Продажи "Гранд-сметы" растут, мы выолняем все больше заказов на корпоративное обучение, многие наши выпускники приходят к нам со своими фриланс-проектами... Статитика Яндекса показывает рост количества запросов по "сметной" тематике... </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15 -->
+                <!-- 16 -->
+                <!-- 17 -->
+                <!-- 18 -->
+                <!-- 19 -->
+                <!-- 110 -->
+                <!-- 111 -->
+                <div class="col s12 m6  xl4">
+                    <div class="card">
+
+                        <div class="card-content">
+                            <span class="card-title truncate activator grey-text text-darken-4"><i class="material-icons right">crop_rotate</i>Технологии</span>
+                            <p class="truncate">В Гранд-Смете есть подсказки, но</p>
+                            <p class="truncate">Это, что нельзя освоить быстро </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Технологии строительства<i class="material-icons right">close</i></span>
+                            <p>Например, чтобы ввернуть лампочку, нужно предусмотреть расходы на покупку/аренду стремянки, установку/хранение стремянки... С десяток пунктов наберется</p>
+                            <p>А сколько работ нужно учесть и обсчитать при расчете стоиости типового строитеьного объекта? Десятки тысяч!
+                            </p>
+                            <p>Гранд-Смета поможет конечно, но без знания Технологий строительства будет туго. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 112 -->
+            </div>
+        </div>
+    </div>
+    <!-- cards 1 END-->
+    <!-- cards 2 -->
+    <div class="container ">
+        <div class="section">
+            <div class="row">
+                <!-- 21 -->
+                <div class="col s12 m6 ">
+                    <h5 class="center truncate">Программа курса</h5>
+                    <div class="card ">
+                        <div class="card-image">
+                            <img class="materialboxed" src="./img_freemind/smetchik40%20.png">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>Запустите воспроизведение аудио, а потом увеличьте диаграмму, или окройте <a href="#modal00">программу курса</a></p>
+                            </div>
+                            <div class="card-action">
+                                <audio controls>
+    <source src="./assets/mp3/horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 22 -->
+                <div class="col s12 m6 ">
+                    <h5 class="center truncate">Консалтинг365 подробно</h5>
+                    <div class="card ">
+                        <div class="card-image">
+                            <img class="materialboxed" src="./img_freemind/consult365.jpg">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>Запустите воспроизведение аудио, а потом увеличьте диаграмму, или окройте <a href="#modal00">программу курса</a></p>
+                            </div>
+                            <div class="card-action">
+                                <audio controls>
+    <source src="./assets/mp3/horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 23 -->
+                <!-- 24 -->
+            </div>
+        </div>
+    </div>
+    <!-- cards 2 END-->
+
+    <!-- 11 -->
+    <!-- Modal global modals -->
+    <div class="EmptyClassforEditor" <!-- 00 course programm -->
+        <div id="modal00" class="modal">
+            <div class="modal-content">
+                <h4>Программа курса</h4>
+                <h5>Занятие 1</h5>
+                <ul class="ul">
+                    <li>Введение: общее понятие о затратах и формирование цены в строительной отрасле.
+                    </li>
+                    <li>Основные документы, определяющие порядок ценообразования. Действующие сметно-нормативные базы.
+                    </li>
+                    <li>Нормы (нормативы) и расценка. Сущность и составляющие.
+                    </li>
+                    <li>Структура сметной стоимости.
+                    </li>
+                    <li>Практическая работа «Калькулирование прямых затрат в составе сметной стоимости» Понятие накладных расходов, сметной прибыли. Методы определения.
+                    </li>
+                    <li>Способы определения сметной стоимости.
+                    </li>
+                    <li>Виды и формы сметной документации.
+                    </li>
+                    <li>Составление сметного расчета по индивидуальным заданиям.
+                    </li>
+                    <li>Общее понимание и осмысление запроса заказчика.
+                    </li>
+                    <li>Подсчёт объёмов работ, ресурсов и цен. Обзорная информация.
+                    </li>
+                    <li>Практическая работа по основам ведения сметной документации.
+                    </li>
+                </ul>
+                <h5>Занятие 2</h5>
+                <ul class="ul">
+                    <li>Структура базы 2001 года. ГЭСН, ФЕР и ТЕР.
+                    </li>
+                    <li>Кодирование позиций.
+                    </li>
+                    <li>Работа с индексами.
+                    </li>
+                    <li>Сравнительная характеристика различных методов расчета.
+                    </li>
+                    <li>Представление норм 2001 года в печатном виде или электронной рассылкой.
+                    </li>
+                    <li>Правила составления сметной документации с использованием базы 2001 года.
+                    </li>
+                    <li>Особенности определение накладных расходов, сметной прибыли в базовом и текущем уровне цен.
+                    </li>
+                    <li>Изучение и разъяснения технической части справочников МДС.
+                    </li>
+                    <li>Практическая работа «Составление сметы на строительные работы» Практическая работа «Составление сметы на ремонтные работы» с использованием программы.
+                    </li>
+                </ul>
+                <h5>Занятие 3</h5>
+                <ul class="ul">
+                    <li>Навыки работы по составлению сметных расчетов с умением определять экономическую выгоду проекта.
+                    </li>
+                    <li>Определение сроков проведения работ по трудозатратам.
+                    </li>
+                    <li>Определение стоимости внесенных ресурсов.
+                    </li>
+                    <li>Представление норм в печатном виде или электронной рассылкой.
+                    </li>
+                    <li>Правила составления сметной документации с использованием различных баз других регионов.
+                    </li>
+                    <li>Правила составления тендерной документации.
+                    </li>
+                    <li>Изучение правил прохождения строительных и проектных экспертиз.
+                    </li>
+                    <li>Особенности определение накладных расходов, сметной прибыли в базовом и текущем уровне цен.
+                    </li>
+                    <li>Изучение строительно-проектной чертежной документации.
+                    </li>
+                    <li>Практическая работа «Расчет затрат на демонтаж конструкций и оборудования» Практическая работа «Расчет прямых затрат, накладных расходов, сметной прибыли и зимнего удорожания для базы ТСН-2001».
+                    </li>
+                </ul>
+                <h5>Занятие 4</h5>
+                <ul class="ul">
+                    <li>Налогообложение строительных организаций.
+                    </li>
+                    <li>Работа по вкладкам системы ГРАНД-Смета.
+                    </li>
+                    <li>Составление объектных смет и сводных сметных расчетов.
+                    </li>
+                    <li>Составление и вывод на печать форм сметной документации.
+                    </li>
+                    <li>Изучение слаботочных систем.
+                    </li>
+                    <li>Изучение ремонтно-строительных сборников.
+                    </li>
+                    <li>Формирование расчета по учету строительного мусора.
+                    </li>
+                    <li>Учет выполненных работ (КС-2, КС-3, КС-6 и т.д.).
+                    </li>
+                    <li>Создание календарного плана.
+                    </li>
+                    <li>Практическая работа «Формирование объектной сметы» Практическое задание «Сводный сметный расчет стоимости строительства и ремонта.
+                    </li>
+                </ul>
+                <h5>Занятие 5</h5>
+                <ul class="ul">
+                    <li>Изучение и работа с монтажными сборниками.
+                    </li>
+                    <li>Изучение пусконаладочных работ.
+                    </li>
+                    <li>Специфика применения сборников.
+                    </li>
+                    <li>Практика: «Cоставлению смет по заданию преподавателя».
+                    </li>
+                    <li>Практика: «Составление отчетности и вывод форм».
+                    </li>
+                    <li>Практика: «Монтаж и демонтаж оборудования».
+                    </li>
+                    <li>Практика: «Применения индексов пересчета и коэффициентов».
+                    </li>
+                    <li>Практика: «Создание Актов отчетности».
+                    </li>
+                    <li>Практика: «Работа со всеми вкладками программы».
+                    </li>
+                    <li>Практика: «Самостоятельное составление сметного расчета на выбранный объект».
+                    </li>
+                </ul>
+                <h5>Занятие 6</h5>
+                <ul class="ul">
+                    <li>Практика: «Самостоятельное составление календарных графиков расчета».
+                    </li>
+                    <li>Практика: «Самостоятельное составление форм КС-6а и М-29».
+                    </li>
+                    <li>Практика: «Создание сметной документации с применением строительных чертежей проектов».
+                    </li>
+                    <li>Практика: «Создание сметной документации для прохождения тендера».
+                    </li>
+                    <li>Практика: «Составление сметной документации ресурсным методом».
+                    </li>
+                    <li>Практика: «Составление сметы с учетом пожелания заказчика».
+                    </li>
+                    <li>Практика: «Составление смет для заказчика с Федеральным финансированием».
+                    </li>
+                    <li>Ответы на любые вопросы. Разбор индивидуальных заданий.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 0 contact form from 123-->
+        <div id="modal0" class="modal">
+            <div class="modal-content">
+                <h4>Обязательно укажите e-mail</h4>
+                <iframe src="http://www.123contactform.com/form-2852787/Contact-Lead-Form" width="760" height="500">Loading...</iframe>
+            </div>
+        </div>
+
+        <!-- Modal Structure 1 -->
+        <!-- 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+
+                <!-- www.123contactform.com script begins here -->
+                <script type="text/javascript" defer src="//www.123contactform.com/embed/2852787.js" data-role="form" data-default-width="650px"></script>
+                <p>Powered by <a class="footerLink13" title="123ContactForm" href="http://www.123contactform.com">123ContactForm</a> | <a style="font-size:small!important;color:#000000!important; text-decoration:underline!important;" title="Looks like phishing? Report it!" href="http://www.123contactform.com/sfnew.php?s=123contactform-52&control119314=http:///contact-form--2852787.html&control190=Report%20abuse" rel="nofollow">Report abuse</a></p>
+                <!-- www.123contactform.com script ends here -->
+
+            </div>
+        </div>
+        <!-- 11 -->
+        <div id="modal11" class="modal">
+            <div class="modal-content">
+                <h4>Сметчик</h4>
+                <p>Даже в кризис эта специальность востребована</p>
+                <p>Продажи "Гранд-сметы" растут, мы выполняем все больше заказов на корпоративное обучение, многие наши выпускники приходят к нам со своими фриланс-проектами... </p>
+                <p>И статитика Яндекса показывает рост количества запросов по "сметной" тематике... </p>
+                <p>Тот же Яндекс показывает по другим специальностям прямо противоположную картину.</p>
+                <p>Почему же такой подъем?</p>
+                <p>Мы задавали этот вопрос нашим заказчикам. Больше всего нам понравился ответ: "Нам теперь лампочку не дают ввернуть без сметы!"</p>
+                <img class="materialboxed" width="100" src="img_freemind\sm_grand0.jpg">
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons right">redo</i></a>
+            </div>
+        </div>
+        <!-- 12 -->
+        <div id="modal12" class="modal">
+            <div class="modal-content">
+                <h4>Работодатели</h4>
+                <p>Работодатели - это по большей части ("строительные" малые и средние) фирмы, в которых создаются новые сметные отделы.</p>
+                <p>Мы выделили три главных особенности вакансий в таких организация:</p>
+                <p>1. Нужен "свой" сметчик, которому можно доверять.</p>
+                <p>2. Сметчик нужен срочно ("еще вчера"), поскольку уже есть возможность получить подряд (фианнсирование).</p>
+                <p>3. Работодатели (ошибочно) полагают, что навыки работы с "Гранд-смета" - это главное умение (компетенция) сметчика.</p>
+                <p>Так можно быстро "по знакомству" получить навыки "квазисметчика" - специалиста по кнопкам "Гранд-сметы" ничего не понимающим в ТЕХНОЛОГИЯХ строительства.</p>
+                <p>Чтобы освоить технологии и набраться опыта нужно (по нашим оценкам)365 дней.</p>
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons right">redo</i></a>
+            </div>
+        </div>
+        <!-- 13-->
+        <div id="modal13" class="modal">
+            <div class="modal-content">
+                <h4>Квалификация</h4>
+                <p>Когда сметный отдел создается "с нуля" и "в цейтноте", и сметчиком становится </p>
+                <p>.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons right">redo</i></a>
+            </div>
+        </div>
+        <!-- 14-->
+        <!-- 15 -->
+    </div>
+    <!-- Modal Structure1  END-->
+
+    <!-- 3 text sections with icons  -->
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                        <h5 class="center">Качество программы</h5>
+
+                        <p class="light">Составлялась по принципу "ничего лишнего". Автор читал разные курсы... На рынке много "воды"... </p>
+                        <p class="light">Автор кровно заинтересован в том, чтобы вы (в последующие 365 дней) задавали ему как можно меньше вопросов... </p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                        <h5 class="center">Об авторе программы</h5>
+
+                        <p class="light">Каким должен быть Суперспециалист </p>
+                        <p class="light">Ссылки на письма и благодарности </p>
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light " href="#modal1">Modal</a>
+                        <!-- Modal Trigger END-->
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                        <h5 class="center">Опыт - 35 лет</h5>
+
+                        <p class="light">Это огромный опыт. Это мышление суперсметчика. Оно и позволило нам гарантировать вам качество нашего курса программой поддержки слушателей "Консалтинг365" </p>
+                        <p class="light">... </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 3 text sections with icons  END-->
+    <!-- footer -->
+    <footer class="page-footer grey">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Наши опытнейшие сметчики могут очень многое</h5>
+                    <p class="grey-text text-lighten-4">По запросам мы также учим "чтению чертежей", ... при необходимости обучаем строительным CAD-системам( AutoDesk(AutoCAD),Inventor,SolidWorks ...)
+                        <br/>Разработка сметной документации "под ключ"</p>
+                    <p>И это только два примера. Все сметчики более чем с 35 летним опытом и... титулованы</p>
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Контакты</h5>
+                    <ul>
+                       
+                            <li><a class="white-text" href="tel:74956989743">+7 (495) 698-97-43</a></li>
+                            <li><a class="white-text" href="mailto:mail@s-trado.ru">mail@s-trado.ru</a></li>
+                             <li><img class="materialboxed" width="100%" src="img\ulanskiy.png "><a class="white-text" href="#section_map">г. Москва, Уланский переулок, дом 14, корпус А</a></li>
+
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">История наших предожений</h5>
+                    <ul>
+                        <li><a class="white-text" href="http://s-trado.ru/">На сайте s-trado</a></li>
+                        <li><a class="white-text" href="http://znaniesmet.ru/">На сайте znaniesmet</a></li>
+                        <li><a class="white-text" href="http://s-trado.ru/index.php/programmnye-produkty/smetnoe-delo/grand-smeta">Купить "Гранд-Смета"</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- footer END-->
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+</body>
+
+</html>
